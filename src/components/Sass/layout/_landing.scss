@@ -1,0 +1,59 @@
+.landing {
+  height: 100vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(../../../res/images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  position: relative;
+
+  @include flexbox;
+
+  &__presents {
+    &-text--box {
+      @include flexbox;
+      flex-direction: column;
+
+      h1 {
+        text-transform: uppercase;
+
+        color: $color-white;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 74px;
+        line-height: 120%;
+
+        span {
+          font-weight: bold;
+        }
+      }
+
+
+      div {
+        width: 700px;
+        height: 150px;
+
+        p {
+          color: $color-white;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 25px;
+          letter-spacing: 0.15px;
+          line-height: 117.4%;
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+
+  &__logo{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+}

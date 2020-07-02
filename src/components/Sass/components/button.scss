@@ -1,0 +1,17 @@
+.buttonLink {
+  width: 352px;
+  height: 69px;
+  background: $color-yellow;
+  border-radius: 8px;
+  
+  @include flexbox;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 52px;
+
+  
+  letter-spacing: 0.15px;
+  color: $color-white;
+}

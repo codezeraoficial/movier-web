@@ -1,0 +1,12 @@
+@import "./components/Sass/abstracts/mixins";
+@import "./components/Sass/abstracts/variables";
+
+
+@import "./components/Sass/base/base";
+
+//base here
+
+@import "./components/Sass/components/button.scss";
+@import "./components/Sass/components/link.scss";
+
+@import "./components/Sass/layout/landing";
