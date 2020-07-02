@@ -1,0 +1,18 @@
+.buttonSubmit{
+  width: 352px;
+  height: 69px;
+  margin-top: 20px;
+  background: $color-yellow;
+  border-radius: 8px;
+  border: none;
+  @include flexbox;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 52px;
+
+  
+  letter-spacing: 0.15px;
+  color: $color-white;
+}

@@ -1,20 +1,4 @@
-.landing {
-  height: 100vh;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)
-    ),
-    url(../../../res/images/hero.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-
-  position: relative;
-
-  @include flexbox;
-
-  &__presents {
+  .landing__presents {
     &-text--box {
       @include flexbox;
       flex-direction: column;
@@ -51,9 +35,4 @@
     }
   }
 
-  &__logo{
-    position: absolute;
-    top: 10%;
-    left: 10%;
-  }
-}
+

@@ -1,15 +1,12 @@
 import React from "react";
 
-import logo from '../../../res/assets/movier.svg';
 import ButtonLink from "../design/buttonLink";
 import LinkNav from "../design/link";
+import DefaultLayout from "../design/defaultLayout";
 
 const LandingPage: React.FC = () => {
   return (
-    <div className="landing">
-      <div className="landing__logo">
-        <img src={logo} alt="Logo"/>
-      </div>
+    <DefaultLayout>    
       <div className="landing__presents">
         <div className="landing__presents-text--box">
           <h1>
@@ -29,7 +26,7 @@ const LandingPage: React.FC = () => {
           <LinkNav label="I already have an account" nav="/signin"/>
         </div>
       </div>
-    </div>
+    </DefaultLayout>
   );
 };
 

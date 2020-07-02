@@ -1,0 +1,25 @@
+.form {
+  @include flexbox;
+  flex-direction: column;
+  width: 571px;
+  height: 806px;
+  left: 680px;
+  top: 128px;
+
+  border-radius: 5px;
+  background: rgba(26, 26, 26, 0.81);
+
+
+  label {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 39px;
+    line-height: 58px;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.15px;
+
+    color: $color-white;
+  }
+}
