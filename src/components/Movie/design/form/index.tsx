@@ -1,6 +1,5 @@
 import React from "react";
-import ButtonSubmit from "../buttonSubmit";
-import LinkNav from "../link";
+
 
 interface FormProps {
   label: string;
@@ -12,8 +11,6 @@ const Form: React.FC<FormProps> = ({ label, children }) => {
     <form className="form">
       <label>{label}</label>
       {children}
-      <ButtonSubmit label="Register" />
-      <LinkNav label="I already have an account" nav="/signin" />
     </form>
   );
 };
