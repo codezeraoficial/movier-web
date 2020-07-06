@@ -22,7 +22,7 @@ const LandingPage: React.FC = () => {
               watching in the comfort of your home.
             </p>
           </div>
-          <ButtonLink label="Get started!" nav="/singup"/>
+          <ButtonLink label="Get started!" nav="/signup"/>
           <LinkNav label="I already have an account" nav="/signin"/>
         </div>
       </div>
