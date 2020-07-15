@@ -1,0 +1,14 @@
+.cardContent{
+  @include flexbox;
+  margin-top: 60px;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 637px;
+
+  svg{
+    font-size: 70px;
+    color: #FFF;
+    font-weight: 300;
+  }
+}

@@ -1,8 +1,9 @@
 import React from "react";
-import DefaultLayout from "../design/defaultLayout";
-import Form from "../design/form";
-import Input from "../design/input";
-import ButtonSubmit from "../design/buttonSubmit";
+import DefaultLayout from "../design/layout/GetStart";
+import Form from "../design/components/form";
+import Input from "../design/components/input";
+import ButtonSubmit from "../design/components/buttonSubmit";
+import LinkNav from "../design/components/link";
 
 
 const Recover: React.FC = () => {
@@ -15,6 +16,7 @@ const Recover: React.FC = () => {
         <Input placeholder="Your new password" />
         <Input placeholder="Confirm your new password" />
         <ButtonSubmit label="Recover" />
+        <LinkNav label="Back to login" nav="/signin" />
       </Form>
     </DefaultLayout>
   );

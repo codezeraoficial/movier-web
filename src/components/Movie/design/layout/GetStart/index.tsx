@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../../../res/assets/movier.svg";
+import logo from "../../../../../res/assets/movier.svg";
 import { Link } from "react-router-dom";
 
 export interface DefaultLayoutProps {

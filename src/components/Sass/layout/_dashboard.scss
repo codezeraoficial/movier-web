@@ -1,0 +1,23 @@
+.dashboard {
+  @include flexbox;
+  margin-top: 160px;
+
+  flex-direction: column;
+  width: 100%;
+  h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 51px;
+    line-height: 91px;
+    display: flex;
+    letter-spacing: 0.15px;
+    color: $color-white;
+  }
+
+  &__content{
+    @include flexbox;
+    flex-direction: column;
+    width: 100%;
+
+  }
+}

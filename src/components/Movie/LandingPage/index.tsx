@@ -1,8 +1,8 @@
 import React from "react";
 
-import ButtonLink from "../design/buttonLink";
-import LinkNav from "../design/link";
-import DefaultLayout from "../design/defaultLayout";
+import ButtonLink from "../design/components/buttonLink";
+import LinkNav from "../design/components/link";
+import DefaultLayout from "../design/layout/GetStart";
 
 const LandingPage: React.FC = () => {
   return (
