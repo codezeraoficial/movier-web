@@ -1,14 +1,12 @@
-.cardContent{
+.cardContent {
   @include flexbox;
-  margin-top: 60px;
+  justify-content: flex-start;
   flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  height: 637px;
+  align-items: center;
+  scroll-behavior: smooth;
+  width: 90%;
+  overflow: hidden;
 
-  svg{
-    font-size: 70px;
-    color: #FFF;
-    font-weight: 300;
-  }
 }
+
+

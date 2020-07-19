@@ -1,7 +1,6 @@
 .dashboard {
   @include flexbox;
   margin-top: 160px;
-
   flex-direction: column;
   width: 100%;
   h1 {
@@ -14,10 +13,18 @@
     color: $color-white;
   }
 
-  &__content{
+  &__content {
     @include flexbox;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     width: 100%;
 
+    .iconPrevious, .iconNext {
+      @include flexbox;
+      margin: 0 30px;
+      align-items: center;
+      height: 621px;
+    }
+   
   }
 }

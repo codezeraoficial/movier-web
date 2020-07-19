@@ -9,6 +9,10 @@
   outline: 0;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 html, body, #root{
   height: 100%;
   background-color: #FFF;
@@ -20,6 +24,7 @@ html, body, #root{
 
 body{
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body, input, button{
@@ -37,3 +42,29 @@ button{
   cursor: pointer;
 }
 
+
+
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0005;
+  border-radius: 20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $color-yellow;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $color-yellow;
+  opacity: 0.5;
+}
+
+/* Handle */

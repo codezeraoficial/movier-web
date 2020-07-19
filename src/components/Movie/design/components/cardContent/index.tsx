@@ -1,18 +1,17 @@
 import React from "react";
-import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
-import Card from "../card";
+import CardSection from "../cardSection";
 
-const CardContent: React.FC = () => {
+interface CardContentProps{
+  section: number;
+}
+
+const CardContent: React.FC<CardContentProps> = ({section}) => {
+
   return (
-    <div className="cardContent">
-      <BsChevronLeft/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <BsChevronRight />
+    <div className="cardContent">     
+      <CardSection section={1} />
+      <CardSection section={2} />
+      <CardSection section={3} />     
     </div>
   );
 };
