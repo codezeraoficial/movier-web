@@ -13,12 +13,15 @@ export const Container = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: all 0.5s ease-in-out 3s;
-
+  
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 7px 7px 0 0;    
+  border-radius: 7px 7px 0 0;  
+
+  -webkit-transition: background-image 1000ms linear;
+    -ms-transition: background-image 1000ms linear;
+    transition: background-image 1000ms linear;
 
   cursor: pointer;
 

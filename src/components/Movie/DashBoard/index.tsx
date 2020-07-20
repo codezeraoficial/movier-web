@@ -30,7 +30,7 @@ const DashBoard: React.FC = () => {
           handlePrevious={handlePrevious}
           handleNext={handleNext}
           section={section}
-        />
+        />      
       </div>
     </Main>
   );

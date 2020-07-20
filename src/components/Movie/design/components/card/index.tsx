@@ -3,6 +3,7 @@ import { FiPlayCircle } from "react-icons/fi";
 
 import { Container } from "./styles/styles";
 
+
 const Card: React.FC = () => {
   return (
     <div className="card">
