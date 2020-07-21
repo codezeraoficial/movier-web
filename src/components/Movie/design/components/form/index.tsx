@@ -1,17 +1,18 @@
 import React from "react";
-
+import {Form as FormSub} from '@rocketseat/unform';
 
 interface FormProps {
   label: string;
   children: React.ReactNode;
+  handleSubmit: (data: any) => void;
 }
 
-const Form: React.FC<FormProps> = ({ label, children }) => {
+const Form: React.FC<FormProps> = ({ label, children, handleSubmit }) => {
   return (
-    <form className="form">
+    <FormSub className="form" onSubmit={handleSubmit}>
       <label>{label}</label>
       {children}
-    </form>
+    </FormSub>
   );
 };
 

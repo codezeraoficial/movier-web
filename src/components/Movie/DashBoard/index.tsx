@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Main from "../design/layout/Main";
 import DashboardContent from "../design/components/dashboardContent";
+
 
 const DashBoard: React.FC = () => {
   const ref = React.useRef() as React.MutableRefObject<HTMLInputElement>;
   const [section, setSection] = useState<number>(1);
 
   function handleNext() {
-    if(section === 3){
+    if (section === 3) {
       setSection(section - 2);
-    }else{
+    } else {
       setSection(section + 1);
     }
   }
@@ -30,7 +31,7 @@ const DashBoard: React.FC = () => {
           handlePrevious={handlePrevious}
           handleNext={handleNext}
           section={section}
-        />      
+        />
       </div>
     </Main>
   );
