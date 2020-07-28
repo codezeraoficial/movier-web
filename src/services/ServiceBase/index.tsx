@@ -9,7 +9,7 @@ import axios, {
 import { ApiResponse } from "../../Interfaces/Resources/Api/ApiResponse";
 import enviroment from "../../Interfaces/Resources/Env/Enviroment";
 
-const axiosInstance: AxiosInstance = axios.create({
+export const axiosInstance: AxiosInstance = axios.create({
   baseURL: enviroment.movierurl,
   timeout: 30000
 })
@@ -23,6 +23,7 @@ export async function get<TResponse>
   }
   return response;
 }
+
 
 export async function post<TRequest, TResponse>(endPoint: string, postObject: TRequest): Promise<ApiResponse<TResponse>>{
   const result: AxiosResponse<TResponse> = await axiosInstance.post<TResponse>(endPoint, postObject);

@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Main from "../design/layout/Main";
 import DashboardContent from "../design/components/dashboardContent";
-
+import AuthContext from "../../../contexts/auth/auth";
 
 const DashBoard: React.FC = () => {
   const ref = React.useRef() as React.MutableRefObject<HTMLInputElement>;
   const [section, setSection] = useState<number>(1);
+  const { user } = useContext(AuthContext);
 
   function handleNext() {
     if (section === 3) {
@@ -26,7 +27,7 @@ const DashBoard: React.FC = () => {
   return (
     <Main>
       <div className="dashboard">
-        <h1>Welcome, Leonardo!</h1>
+        <h1>Welcome, {user?.user.name}</h1>
         <DashboardContent
           handlePrevious={handlePrevious}
           handleNext={handleNext}

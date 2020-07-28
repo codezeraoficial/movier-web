@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useContext, useState, useEffect } from "react";
 
 import ButtonLink from "../design/components/buttonLink";
 import LinkNav from "../design/components/link";
 import DefaultLayout from "../design/layout/GetStart";
+import SignUpContext from "../../../contexts/user/user";
 
 const LandingPage: React.FC = () => {
+  const { setUser } = useContext(SignUpContext);
+
+  useEffect(()=>{
+    setUser(null);
+  },[])
   return (
     <DefaultLayout>    
       <div className="landing__presents">

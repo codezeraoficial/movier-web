@@ -15,4 +15,12 @@
   
   letter-spacing: 0.15px;
   color: $color-white;
+  transition: background 0.2s;
+
+  &:hover{
+    background: darken($color-yellow, 5%);
+  }
 }
+
+
+

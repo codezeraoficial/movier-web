@@ -18,10 +18,8 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 7px 7px 0 0;  
-
-  -webkit-transition: background-image 1000ms linear;
-    -ms-transition: background-image 1000ms linear;
-    transition: background-image 1000ms linear;
+ 
+  transition:  0.2s;
 
   cursor: pointer;
 
@@ -35,7 +33,6 @@ export const Container = styled.div`
 
   &:hover {
     background-image: linear-gradient(
-      to right bottom,
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.7)
     ),

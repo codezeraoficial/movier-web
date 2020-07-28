@@ -1,12 +1,11 @@
-import {get} from '../ServiceBase/index';
-import {HttpStatus} from '../../Interfaces/Resources/Api/ApiResponse';
-import { UserModel } from '../../Interfaces/Models/User/User';
-
+import { post, put } from "../ServiceBase/index";
+import { HttpStatus } from "../../Interfaces/Resources/Api/ApiResponse";
+import { UserModel } from "../../Interfaces/Models/User/User";
 
 const prefix = "users";
 
-export async function GetUsers(
-  ): Promise<UserModel[] | null> {
-    const result = await get<UserModel[]>(prefix);
-    return result.status === HttpStatus.OK ? result.data : null;
-  }
+export async function CreateUser(user: UserModel): Promise<UserModel | null> {
+    const result = await post<any, UserModel>(prefix, user);
+     return result.status === HttpStatus.CREATED ? result.data : null;
+   
+}

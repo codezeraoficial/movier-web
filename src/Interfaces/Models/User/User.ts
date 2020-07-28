@@ -1,12 +1,18 @@
 export interface UserModel {
+  name: string;
+  email: string;
+  password: string;
+  document: string;
+  phone: string; 
+}
+
+export interface UserRequest {
   _id: string;
   name: string;
   email: string;
   password: string;
   document: string;
-  phone: string;
-  createdAt: string;
-  updatedAt: string;
+  phone: string; 
 }
 
 export interface User{
