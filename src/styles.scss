@@ -8,14 +8,20 @@
 
 @import "./components/Sass/components/button.scss";
 @import "./components/Sass/components/buttonSubmit";
+@import "./components/Sass/components/buttonDefault";
+
 @import "./components/Sass/components/link.scss";
 @import "./components/Sass/components/defaultLayout.scss";
 @import "./components/Sass/components/mainLayout.scss";
 @import "./components/Sass/components/form";
 @import "./components/Sass/components/input";
 @import "./components/Sass/components/cardContent";
-@import "./components/Sass/components/cardSection";
 @import "./components/Sass/components/card";
+
+@import "./components/Sass/components/label";
+
+@import "./components/Sass/components/backDrop";
+@import "./components/Sass/components/modalPay";
 
 @import "./components/Sass/layout/landing";
 @import "./components/Sass/layout/dashboard";

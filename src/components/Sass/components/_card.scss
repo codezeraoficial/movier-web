@@ -5,8 +5,9 @@ $duration: 250ms;
   @include flexbox;
   justify-content: space-between;
   flex-direction: column;
+  height: auto;
   width: 250px;
-  height: 500px;
+  position: relative;
 
   background: $color-white;
   border-radius: 7px;

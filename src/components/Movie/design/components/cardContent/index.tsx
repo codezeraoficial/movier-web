@@ -2,16 +2,12 @@ import React from "react";
 import CardSection from "../cardSection";
 
 interface CardContentProps{
-  section: number;
+  margin: number;
+  widthContent: number;
 }
-
-const CardContent: React.FC<CardContentProps> = ({section}) => {
-
+const CardContent: React.FC<CardContentProps> = ({margin, widthContent}) => {
   return (
-    <div className="cardContent">     
-      <CardSection section={1} />
-      <CardSection section={2} />
-      <CardSection section={3} />     
+    <div className="cardContent" style={{width: widthContent, marginLeft: margin}}>     
     </div>
   );
 };

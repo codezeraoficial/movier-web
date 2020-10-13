@@ -1,8 +1,9 @@
 .dashboard {
   @include flexbox;
-  margin-top: 160px;
   flex-direction: column;
   width: 100%;
+  position: relative;
+
   h1 {
     font-style: normal;
     font-weight: bold;
@@ -14,16 +15,47 @@
   }
 
   &__content {
-    @include flexbox;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+    
+    h1{
+      font-size: 30px;
+    }
+    .contentMovies{
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+    
+      transition: margin-left 1s;
+    }
 
-    .iconPrevious, .iconNext {
+    button{
       @include flexbox;
-      margin: 0 30px;
-      align-items: center;
-      height: 621px;
+      position: absolute;
+
+      height: 100%;
+      z-index: 6;
+      background: rgba(20, 20, 20, 0.7);
+      border: 0;
+      visibility: hidden;
+
+
+      &:hover {
+        svg {
+          width: 45px;
+          height: 45px;
+        }
+      }
+    }
+
+    &:hover {
+      button {
+        visibility: visible;
+      }
     }
    
   }

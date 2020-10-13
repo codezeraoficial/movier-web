@@ -1,34 +1,39 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FiPlayCircle } from "react-icons/fi";
+import ModalContext from "../../../../../contexts/modal/modal";
+import { MovieModel } from "../../../../../Interfaces/Models/Movier/Movie";
 
 import { Container } from "./styles/styles";
 
+interface Movie {
+  movie: MovieModel
+}
+const Card: React.FC<Movie> = ({ movie }) => {
+  const { name, image_url,  gender, classification, release_date, author } = movie;
+  const { setOpenModalPay, openModalPay } = useContext(ModalContext);
 
-const Card: React.FC = () => {
   return (
     <div className="card">
       <header className="card__header">
-        <Container
-          src={"https://ap.imagensbrasil.org/images/2017/12/06/serie-Dark.jpg"}
-        >
+        <Container src={image_url} onClick={() => setOpenModalPay(!openModalPay)}>
           <FiPlayCircle />
         </Container>
       </header>
       <footer className="card__footer">
         <h4>
-          Movie: <span>Dark</span>
+          Movie: <span>{name}</span>
         </h4>
         <h4>
-          Gender: <span>Drama, Suspense</span>
+          Gender: <span>{gender}</span>
         </h4>
         <h4>
-          Author: <span>Ronny Schalk</span>
+          Author: <span>{author}</span>
         </h4>
         <h4>
-          Release Date: <span>20/04/2020</span>
+          Release Date: <span>{release_date}</span>
         </h4>
         <h4>
-          Classification: <span>14</span>
+          Classification: <span>{classification}</span>
         </h4>
       </footer>
     </div>

@@ -1,0 +1,25 @@
+.buttonDefault{
+  height: 69px;
+  margin-top: 20px;
+  background: $color-yellow;
+  border-radius: 7px;
+  border: none;
+  @include flexbox;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 52px;
+
+  
+  letter-spacing: 0.15px;
+  color: $color-white;
+  transition: background 0.2s;
+
+  &:hover{
+    background: darken($color-yellow, 5%);
+  }
+}
+
+
+

@@ -1,11 +1,8 @@
 .cardContent {
-  @include flexbox;
-  justify-content: flex-start;
+  display: flex;
   flex-direction: row;
-  align-items: center;
-  scroll-behavior: smooth;
-  width: 75%;
-  overflow: hidden;
+  align-items: stretch;
+  transition: margin-left 1s;
 
 }
 

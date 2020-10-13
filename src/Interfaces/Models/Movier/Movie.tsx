@@ -1,6 +1,10 @@
-export interface Movie{
-    id: number,
-    image: string,
-    imageBg: string,
-    title: string
-}
+export interface MovieModel{
+    _id: string,
+    movie_url: string,
+    image_url: string,
+    name: string,
+    release_date:string,
+    classification: string,
+    gender: string,
+    author: string,
+  }

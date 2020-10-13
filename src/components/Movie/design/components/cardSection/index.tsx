@@ -1,19 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import MovieContext from "../../../../../contexts/movie/movie";
 import Card from "../card/index";
 
-interface CardSectionProps{
-  section: number;
-}
 
-const CardSection: React.FC<CardSectionProps> = ({section}) => { 
- 
+const CardSection: React.FC = () => {
+  const { movies } = useContext(MovieContext)
   return (
-    <section className="cardSection" id={`section${section}`}>
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+    <section>
+      
     </section>
   );
 };

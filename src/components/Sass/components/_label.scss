@@ -1,0 +1,30 @@
+.labelBig{
+
+}
+
+.labelMedium{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.15px;
+  color: $color-white;
+  
+}
+
+.labelSmall{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 42px;
+  
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.15px;
+  color: $color-white;
+
+}

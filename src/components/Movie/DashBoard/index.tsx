@@ -1,39 +1,28 @@
-import React, { useState, useContext } from "react";
+import React, {  useContext, useEffect } from "react";
 import Main from "../design/layout/Main";
 import DashboardContent from "../design/components/dashboardContent";
 import AuthContext from "../../../contexts/auth/auth";
+import MovieContext from "../../../contexts/movie/movie";
+import ModalPay from "../Dialog/ModalPay";
+import ModalContext from "../../../contexts/modal/modal";
 
 const DashBoard: React.FC = () => {
-  const ref = React.useRef() as React.MutableRefObject<HTMLInputElement>;
-  const [section, setSection] = useState<number>(1);
+  const { getMovies } = useContext(MovieContext)
   const { user } = useContext(AuthContext);
+  const { openModalPay } = useContext(ModalContext);
 
-  function handleNext() {
-    if (section === 3) {
-      setSection(section - 2);
-    } else {
-      setSection(section + 1);
-    }
-  }
+  useEffect(() => {
+    getMovies();
+  }, [])
 
-  function handlePrevious() {
-    if (section === 1) {
-      setSection(section + 2);
-    } else {
-      setSection(section - 1);
-    }
-  }
 
   return (
     <Main>
       <div className="dashboard">
         <h1>Welcome, {user?.user.name}</h1>
-        <DashboardContent
-          handlePrevious={handlePrevious}
-          handleNext={handleNext}
-          section={section}
-        />
+        <DashboardContent/>
       </div>
+      <ModalPay/>
     </Main>
   );
 };
