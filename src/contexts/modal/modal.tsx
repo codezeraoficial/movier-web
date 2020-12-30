@@ -1,29 +1,36 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
+import { MovieModel } from "../../Interfaces/Models/Movier/Movie";
+import { GetMovieById } from "../../services/Movie/Movie";
+import MovieContext from "../movie/movie";
 
 interface ModalContextData {
-  openModalPay: boolean;
-  openBackdrop: boolean;
-  setOpenModalPay: (openModalPay: boolean) => void;
-  setOpenBackdrop: (openModalPay: boolean) => void;
+  modalPay: boolean;
+  setModalPay: (openModalPay: boolean) => void;
+  openModalPay: (id: string) => void;
+  closeModalPay: () => void;
 }
 
 const ModalContext = createContext<ModalContextData>({} as ModalContextData);
 
 export const ModalProvider: React.FC = ({ children }) => {
-  const [openBackdrop, setOpenBackdrop] = useState<boolean>(false);
-  const [openModalPay, setOpenModalPay] = useState<boolean>(false);
+  const { setMovie } = useContext(MovieContext);
+  const [modalPay, setModalPay] = useState<boolean>(false);
 
-  useEffect(()=>{
-    console.log(openBackdrop);
-    
-    if(!openBackdrop){
-      setOpenModalPay(false)
+  const openModalPay = async (id: string) => {   
+    const response = await GetMovieById(id);
+    if (response) {  
+      setMovie(response);
+      setModalPay(true);
     }
-  },[openBackdrop])
+  }
+  const closeModalPay = () => {
+    setModalPay(false);
+    setMovie({} as MovieModel);
+  }
 
 
   return (
-    <ModalContext.Provider value={{ openModalPay, setOpenModalPay, openBackdrop, setOpenBackdrop }}>
+    <ModalContext.Provider value={{ modalPay, setModalPay, openModalPay, closeModalPay }}>
       {children}
     </ModalContext.Provider>
   );

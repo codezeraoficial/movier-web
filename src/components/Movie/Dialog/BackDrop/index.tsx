@@ -3,10 +3,10 @@ import ModalContext from '../../../../contexts/modal/modal';
 
 
 const BackDrop: React.FC = ({ children }) => {
-  const { openBackdrop } = useContext(ModalContext);
+  const { modalPay } = useContext(ModalContext);
 
   return (
-    <div className="backDrop" style={{visibility: openBackdrop ? 'visible' : 'hidden'}}>{children}</div>
+    <div className="backDrop" style={{visibility: modalPay ? 'visible' : 'hidden'}}>{children}</div>
   );
 }
 

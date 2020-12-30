@@ -9,13 +9,13 @@ interface Movie {
   movie: MovieModel
 }
 const Card: React.FC<Movie> = ({ movie }) => {
-  const { name, image_url,  gender, classification, release_date, author } = movie;
-  const { setOpenModalPay, openModalPay } = useContext(ModalContext);
+  const { name, image_url,  gender, classification, release_date, author, _id } = movie;
+  const { openModalPay } = useContext(ModalContext);
 
   return (
     <div className="card">
       <header className="card__header">
-        <Container src={image_url} onClick={() => setOpenModalPay(!openModalPay)}>
+        <Container src={image_url} onClick={() => openModalPay(_id)}>
           <FiPlayCircle />
         </Container>
       </header>

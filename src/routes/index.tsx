@@ -7,6 +7,7 @@ import SignIn from "../components/Movie/SignIn";
 import Recover from "../components/Movie/Recover";
 import DashBoard from "../components/Movie/DashBoard";
 import PrivateRoute from "./PrivateRoute";
+import Room from "../components/Movie/Room";
 
 const Routes: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const Routes: React.FC = () => {
         <Route component={SignIn}  path="/signin" />
         <Route component={Recover}  path="/recover" />
         <PrivateRoute component={DashBoard}  path="/dashboard"/>
+        <PrivateRoute component={Room}  path="/room/:id?"/>
       </Switch>
   );
 };

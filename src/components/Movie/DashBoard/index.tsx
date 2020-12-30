@@ -4,22 +4,21 @@ import DashboardContent from "../design/components/dashboardContent";
 import AuthContext from "../../../contexts/auth/auth";
 import MovieContext from "../../../contexts/movie/movie";
 import ModalPay from "../Dialog/ModalPay";
-import ModalContext from "../../../contexts/modal/modal";
 
 const DashBoard: React.FC = () => {
   const { getMovies } = useContext(MovieContext)
-  const { user } = useContext(AuthContext);
-  const { openModalPay } = useContext(ModalContext);
+  const { userAuth} = useContext(AuthContext);
 
   useEffect(() => {
     getMovies();
   }, [])
+  
 
 
   return (
     <Main>
       <div className="dashboard">
-        <h1>Welcome, {user?.user.name}</h1>
+        <h1>Welcome, {userAuth?.user.name}</h1>
         <DashboardContent/>
       </div>
       <ModalPay/>
